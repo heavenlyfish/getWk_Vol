@@ -6,10 +6,11 @@
 import time
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import Select
 import pandas as df
 
-driver = webdriver.Chrome('D:/GitHub/SeleniumDriver/Chrome/chromedriver.exe')
+driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.maximize_window()
 driver.get("https://www.tdcc.com.tw/QStatWAR/inputframe.htm")
 time.sleep(2)
